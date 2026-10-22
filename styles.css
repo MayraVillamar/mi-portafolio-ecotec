@@ -1,114 +1,165 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --background-color: #f4f6f7;
-    --text-color: #333333;
+    --primary-color: #a2d2ff;
+    --secondary-color: #bde0fe;
+    --accent-color: #ffafcc;
+    --bg-color: #f8f9fa;
     --card-bg: #ffffff;
+    --text-color: #4a5568;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
 .header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: linear-gradient(135deg, #bde0fe, #ffc8dd);
+    color: #4a5568;
+    padding: 2.5rem 1rem;
+    text-align: center;
 }
 
-.nav ul {
-    display: flex;
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #3b5249;
+}
+
+.nav-links {
     list-style: none;
-    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-.nav a {
-    color: white;
+.nav-links a {
+    color: #4a5568;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s;
 }
 
-.nav a:hover {
-    color: var(--secondary-color);
+.nav-links a:hover {
+    background: #ffafcc;
+    color: white;
 }
 
 .hero {
     text-align: center;
     padding: 3rem 1rem;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--card-bg);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 5px solid #bde0fe;
 }
 
 .section {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto 2rem auto;
+    padding: 1.8rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.section h2 {
+    color: #6c5ce7;
+    border-bottom: 3px solid #ffc8dd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .skills-list {
     display: flex;
-    gap: 1rem;
+    gap: 10px;
+    flex-wrap: wrap;
     list-style: none;
-    margin-top: 1rem;
 }
 
 .skills-list li {
-    background-color: var(--secondary-color);
+    background-color: #cdb4db;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.project-card {
+    border: 2px dashed #bde0fe;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    background: #fafaff;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 12px;
 }
 
-.contact-form input, 
-.contact-form textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
 }
 
 .contact-form button {
-    background-color: var(--primary-color);
+    background-color: #ffafcc;
     color: white;
-    padding: 0.8rem;
     border: none;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: var(--secondary-color);
+    background-color: #ff85a1;
 }
 
-.footer {
+footer {
     text-align: center;
-    padding: 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
+    padding: 1.8rem;
+    background-color: #bde0fe;
+    color: #4a5568;
     margin-top: 2rem;
+    font-weight: 500;
 }
 
-.footer a {
-    color: var(--secondary-color);
+footer a {
+    color: #6c5ce7;
+    font-weight: bold;
 }
